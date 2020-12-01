@@ -7,7 +7,7 @@ class MainClass
     public static void Main(string[] args)
     {
         List<int> list = new List<int>();
-        foreach (string line in File.ReadLines("./day1_input.txt"))
+        foreach (string line in File.ReadLines("./Input.txt"))
         {
             list.Add(Int32.Parse(line));
         }
