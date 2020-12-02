@@ -43,7 +43,7 @@ class MainClass
         return totalCorrect;
     }
 
-    private static int Part2(IEnumerable<string> lines)
+    private static int Part2(List<string> lines)
     {
         int totalCorrect = 0;
         foreach(string line in lines)
