@@ -9,11 +9,9 @@ class MainClass
     {
         List<string> boardingPasses = File.ReadLines("./Input.txt").ToList();
 
-        // Console.WriteLine($"Part1 highest seat ID: {Part1(boardingPasses)}");
+        Console.WriteLine($"Part1 highest seat ID: {Part1(boardingPasses)}");
         Console.WriteLine($"Part2 ID: {Part2(boardingPasses)}");
     }
-
-
 
     private static int IdCalculator(string boardingPass)
     {
@@ -80,30 +78,19 @@ class MainClass
 
         foreach (string pass in boardingPasses)
         {
-            ids.Add(IdCalculator(pass));   
+            ids.Add(IdCalculator(pass));
         }
 
-        // ids.Sort();
+        ids.Sort();
 
-        for (int i = 0; i < ids.Count; i++)
+        for (int i = ids[0]; i < ids[ids.Count - 1]; i++)
         {
-            // bool result = ids.Exists(x => x == ids[i] + 1);
-
-            // if (Math.Abs(ids[i] - ids[i + 2]) == 2 && !result)
-            // {
-            //     Console.WriteLine($"{ids[i]}, {ids[i + 2]}");
-            // }
-
-
-            // for (int j = i + 1; j < ids.Count - 1; j++)
-            // {
-            //     if (Math.Abs(ids[i] - ids[j]) == 2)
-            //     {
-            //         Console.WriteLine($"{ids[i]}, {ids[j]}");
-                    
-            //     }
-            // }
+            if (!ids.Contains(i))
+            {
+                return i;
+            }
         }
-        return 3;
+
+        return -1;
     }
 }
