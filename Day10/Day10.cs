@@ -98,12 +98,7 @@ class MainClass
                 {
                     int[] intArray = {1, 3, 7};
                     totalArrangements *= (intArray)[unimportant[i].Count - 3];
-                }
-                else
-                {
-                    Console.WriteLine("uh oh");
-                }
-                    
+                }   
             }
         }
 
